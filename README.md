@@ -1,7 +1,9 @@
-# ✨IT Career Fit - Front
+# 🚝Tongue - Back-end
 ```git
-⚡ 2023.03 ~ 2023.06
+⚡ 2024.03 ~ 2024.06
 ```
+&nbsp;&nbsp; <strong>Tongue: </strong> 
+LLM을 활용한 여행 계획부터 기록, 공유까지 전반을 아우르는 통합 여행 플랫폼
 <br />
 
 ## 1️⃣ Login<br/>
