@@ -8,12 +8,13 @@ LLM을 활용한 여행 계획부터 기록, 공유까지 전반을 아우르는
 
 ## 1️⃣ Login<br/>
 ```git
-📌 React, css, axios, session, cookie, env
+📌 Vite, css, Tailwind, axios, session
 ```
 &nbsp;&nbsp;⭐ 입력한 ID와 PassWord를 <strong>axios</strong>를 이용해 서버로 전송한 후 값이 올바르다면 <strong>session</strong> 생성 <br />
-&nbsp;&nbsp;⭐ 자동로그인을 선택할 경우 cookie도 생성 <br />
+
 <div align="center">
-      <img src="https://github.com/ITcareerfit/FRONT/assets/96722691/6e841eb7-8c2a-4822-81f0-0a898a232311"  width="800" >
+      ![로그인](https://github.com/TongueTripVogue/Tongue_Front/assets/80882259/091d19ad-90f5-4a15-80b1-296526a539df)
+      <img src="https://github.com/TongueTripVogue/Tongue_Front/assets/80882259/091d19ad-90f5-4a15-80b1-296526a539df"  width="800" >
       <img src="https://github.com/ITcareerfit/FRONT/assets/96722691/ebc14eb3-3604-4450-90f8-9bd8d1b5f273"  width="800" >
 </div>
 <br />
