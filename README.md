@@ -17,7 +17,7 @@ LLM을 활용한 여행 계획부터 기록, 공유까지 전반을 아우르는
 
 ## ⭐ Using Stacks <br/>
 ```git
-📌 Vue, Gemini API, Tmap API, Vite, HTML, CSS, Tailwind, Javascript, axios
+📌 Vue, Gemini API, Tmap API, Vite, HTML, CSS, Tailwind, JavaScript, axios
 ```
 
 ### &nbsp;&nbsp; Vue 사용 이유<br />
@@ -27,7 +27,6 @@ LLM을 활용한 여행 계획부터 기록, 공유까지 전반을 아우르는
 ### &nbsp;&nbsp; Gemini API 사용 이유<br />
 > ▪️ Google 엔진 검색 기반인 Gemini API를 활용하여 최신 정보와 사용자 정보를 실시간으로 최적화 일정 결과 제공
 
-### 
 <br />
 
 ## 1. Gemini, Tmap API 활용 여행지 추천
