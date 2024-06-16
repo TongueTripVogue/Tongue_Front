@@ -39,70 +39,70 @@ LLM을 활용한 여행 계획부터 기록, 공유까지 전반을 아우르는
 
 ### 구현방법 :
 > Gemini prompt, 사용자 일정 json 형태로 제공 받는 prompt
-``` js
-   const genAI = new GoogleGenerativeAI(VITE_GEMINI_SERVICEKEY);
-   const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-
-   async function run() {
-     let prompt = "";
-     prompt += `${demand.location} ${demand.days - 1}박${demand.days}일 여행 코스 알려줘.`;
-     prompt += `일정은 최대 3개씩 하루에 두 번, ${demand.days * 3}총 개만 알려줘.`;
-     prompt += "걷기 다니기 좋은 곳 출발 지점과 도착지점을 함께 추천해줘.";
-     prompt += "각 일정에는 날짜(1), 장소, 이동 수단(버스, 도보, 차량) 중 하나, 장소 간단한 설명, 예상 비용(1000).";
-     prompt += "json format으로 추천해줘, 컬럼명은 영어, value는 한국어로 제공해줘";
-     prompt += `컬럼명는 다음과 같아, 날짜는 "day",장소는 "loc", 이동 수단은 "transport", 도착 장소에 대한 간단한 설명은 "des".`;
-     const result = await model.generateContent(prompt);
-     const response = await result.response;
-     const text = response.text();
-      
-     console.log(text);
-     const jsonData = text.split("```")[1].split("json")[1];
-     console.log(JSON.parse(jsonData));
-     return JSON.parse(jsonData);
-   }
-```
+   ``` js
+      const genAI = new GoogleGenerativeAI(VITE_GEMINI_SERVICEKEY);
+      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+   
+      async function run() {
+        let prompt = "";
+        prompt += `${demand.location} ${demand.days - 1}박${demand.days}일 여행 코스 알려줘.`;
+        prompt += `일정은 최대 3개씩 하루에 두 번, ${demand.days * 3}총 개만 알려줘.`;
+        prompt += "걷기 다니기 좋은 곳 출발 지점과 도착지점을 함께 추천해줘.";
+        prompt += "각 일정에는 날짜(1), 장소, 이동 수단(버스, 도보, 차량) 중 하나, 장소 간단한 설명, 예상 비용(1000).";
+        prompt += "json format으로 추천해줘, 컬럼명은 영어, value는 한국어로 제공해줘";
+        prompt += `컬럼명는 다음과 같아, 날짜는 "day",장소는 "loc", 이동 수단은 "transport", 도착 장소에 대한 간단한 설명은 "des".`;
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const text = response.text();
+         
+        console.log(text);
+        const jsonData = text.split("```")[1].split("json")[1];
+        console.log(JSON.parse(jsonData));
+        return JSON.parse(jsonData);
+      }
+   ```
 
 <br />
 
 > js 생성자 활용하여 일관된 정보를 back server에 post 전송
-```js
-// 생성자
-class Plan {
-  day;
-  loc;
-  transport;
-  des;
-  cost;
-  lat;
-  lon;
-  address;
-  id;
-
-  constructor(day, loc, transport, des, cost) {
-    this.day = day;
-    ...
-    if (cost == null) {this.cost = 0;
-    } else {this.cost = cost;}
-  }
-}
-
-// 계획 저장
-const sendPlanList = () => {
-  instance.defaults.headers.common["Authorization"] = sessionStorage.getItem("userToken");
-  ...
-
-  instance
-    .post("/travel/regist", planList.value, {
-      params: sendParams,
-    })
-    .then((res) => {
-      router.push({ name: "mypage" });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
-```
+   ```js
+   // 생성자
+   class Plan {
+     day;
+     loc;
+     transport;
+     des;
+     cost;
+     lat;
+     lon;
+     address;
+     id;
+   
+     constructor(day, loc, transport, des, cost) {
+       this.day = day;
+       ...
+       if (cost == null) {this.cost = 0;
+       } else {this.cost = cost;}
+     }
+   }
+   
+   // 계획 저장
+   const sendPlanList = () => {
+     instance.defaults.headers.common["Authorization"] = sessionStorage.getItem("userToken");
+     ...
+   
+     instance
+       .post("/travel/regist", planList.value, {
+         params: sendParams,
+       })
+       .then((res) => {
+         router.push({ name: "mypage" });
+       })
+       .catch((err) => {
+         console.log(err);
+       });
+   };
+   ```
 
 
 ## 2. Gemini API를 사용하여 매거진 글 작성 <br/>
