@@ -5,6 +5,10 @@
 &nbsp;&nbsp; <strong>Tongue: </strong> 
 LLM을 활용한 여행 계획부터 기록, 공유까지 전반을 아우르는 통합 여행 플랫폼
 <br />
+
+- [Gemini, Tmap API 활용 여행지 추천](https://github.com/TongueTripVogue/Tongue_Front?tab=readme-ov-file#1-gemini-tmap-api-%ED%99%9C%EC%9A%A9-%EC%97%AC%ED%96%89%EC%A7%80-%EC%B6%94%EC%B2%9C)
+- [Gemini API를 사용하여 매거진 글 작성](https://github.com/TongueTripVogue/Tongue_Front?tab=readme-ov-file#2-gemini-api%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EB%A7%A4%EA%B1%B0%EC%A7%84-%EA%B8%80-%EC%9E%91%EC%84%B1-)
+
 <div align="center">
    <img src="https://github.com/TongueTripVogue/Tongue_Front/assets/101400650/3e934931-9925-4c00-8963-e4309671611d"  width="600" >
       <br />
@@ -23,6 +27,7 @@ LLM을 활용한 여행 계획부터 기록, 공유까지 전반을 아우르는
 ### &nbsp;&nbsp; Gemini API 사용 이유<br />
 > ▪️ Google 엔진 검색 기반인 Gemini API를 활용하여 최신 정보와 사용자 정보를 실시간으로 최적화 일정 결과 제공
 
+### 
 <br />
 
 ## 1. Gemini, Tmap API 활용 여행지 추천
